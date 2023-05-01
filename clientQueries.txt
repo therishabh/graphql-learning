@@ -42,3 +42,25 @@ query getUserById($userId:ID!){
     }
   }
 }
+
+------------------------------------------
+mutation addNewUser($userNew:UserInput!){
+  userinfo:addNewUserDummy(userNew: $userNew){
+    firstName
+    lastName
+    id
+    email
+  }
+}
+
+// variable
+{
+  "userNew": {
+    "firstName": "Rohan",
+    "lastName": "Sharma",
+    "email": "rohan@gmail.com",
+    "password": "123"
+  }
+}
+
+------------------------------------------
